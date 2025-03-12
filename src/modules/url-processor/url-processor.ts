@@ -2,6 +2,7 @@ import { DatabaseClient } from '../database';
 import { logger } from '../../libs/logger';
 import { Worker } from 'worker_threads';
 import path from 'path';
+import { env } from '../../config/env';
 
 export class URLProcessor {
     private dbClient = DatabaseClient.getInstance().getClient();
@@ -14,7 +15,7 @@ export class URLProcessor {
         return res.rows;
     }
 
-    async startProcessing(batchSize: number = 5) {
+    async startProcessing(batchSize: number = env.BATCH_SIZE) {
         await DatabaseClient.getInstance().connect();
 
         while (true) {

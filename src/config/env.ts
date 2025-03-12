@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const requiredEnvVars = ['DB_USER', 'DB_HOST', 'DB_NAME', 'DB_PASSWORD', 'DB_PORT'];
+const requiredEnvVars = ['DB_USER', 'DB_HOST', 'DB_NAME', 'DB_PASSWORD', 'DB_PORT', 'BATCH_SIZE'];
 
 export const checkEnvVars = () => {
     for (const envVar of requiredEnvVars) {
@@ -18,4 +18,5 @@ export const env = {
     DB_NAME: process.env.DB_NAME!,
     DB_PASSWORD: process.env.DB_PASSWORD!,
     DB_PORT: parseInt(process.env.DB_PORT || '5432'),
+    BATCH_SIZE: parseInt(process.env.BATCH_SIZE || '5'),
 };
