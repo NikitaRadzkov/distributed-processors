@@ -1,0 +1,28 @@
+# Ignore the node_modules folder (project dependencies)
+node_modules/
+
+# Ignore the dist folder (compiled files)
+dist/
+
+# Ignore environment files
+.env
+
+# Ignore log files
+*.log
+
+# Ignore the coverage folder (test results)
+coverage/
+
+# Ignore system files
+.DS_Store
+
+# Ignore IDE settings
+.idea/
+.vscode/
+
+# Ignore local configuration files
+*.local
+
+# Ignore temporary files
+tmp/
+temp/
